@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <link rel="stylesheet" href="./style.css">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            height: 100vh;
+            width: 100vw;
+        }
+
+        .category-filter {
+            margin-bottom: 20px;
+        }
+
+        .category-filter button {
+            padding: 10px 20px;
+            margin: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .image-container {
+            width: 90%;
+            height: 80%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .image-container img {
+            width: 20rem;
+            height: 20rem;
+            margin: 2rem;
+            border-radius: 1rem;
+            transition: 0.5s;
+        }
+
+        .image-container img:hover {
+            transform: scale(1.1) rotate(3deg);
+        }
+
+        .view-image {
+            position: fixed;
+            z-index: 2;
+            height: 100%;
+            width: 100%;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            background: rgb(0, 0, 0, 0.9);
+        }
+
+        .view-image img {
+            height: 40rem;
+            width: 40rem;
+            border-radius: 2rem;
+        }
+
+        .view-image span {
+            color: white;
+            font-size: 4rem;
+            position: absolute;
+            top: 2rem;
+            right: 8rem;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Category Filter -->
+    <div class="category-filter">
+        <button data-category="nature">Nature</button>
+        <button data-category="city">City</button>
+        <button data-category="animals">Animals</button>
+        <button data-category="all">All</button>
+    </div>
+
+    <div class="view-image">
+        <img src="https://images.unsplash.com/photo-1668954206766-404e981f57f7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyMHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=60." alt="">
+        <span>X</span>
+    </div>
+
+    <div class="image-container">
+        <img src="https://plus.unsplash.com/premium_photo-1673292293042-cafd9c8a3ab3?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8bmF0dXJlfGVufDB8fDB8fHww" alt="" data-category="nature">
+        <img src="https://plus.unsplash.com/premium_photo-1672116452571-896980a801c8?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" data-category="city">
+        <img src="https://images.unsplash.com/photo-1555169062-013468b47731?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8YW5pbWFsfGVufDB8fDB8fHww" alt="" data-category="animals">
+        <img src="https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fG5hdHVyZXxlbnwwfHwwfHx8MA%3D%3D" alt="" data-category="nature">
+        <img src="https://images.unsplash.com/photo-1541336032412-2048a678540d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fGNpdHl8ZW58MHx8MHx8fDA%3D" alt="" data-category="city">
+        <img src="https://images.unsplash.com/photo-1484406566174-9da000fda645?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8YW5pbWFsfGVufDB8fDB8fHww" alt="" data-category="animals">
+        <img src="https://images.unsplash.com/photo-1508349937151-22b68b72d5b1?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" data-category="nature">
+        <img src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8Y2l0eXxlbnwwfHwwfHx8MA%3D%3D" alt="" data-category="city">
+    </div>
+    <script src="script.js"></script>
+
+</body>
+</html>
